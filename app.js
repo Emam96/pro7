@@ -21,7 +21,7 @@ function render() {
     let imgEl = document.createElement("img");
     imgEl.setAttribute("src", "images/" + imgs[i].filePath);
     imgEl.setAttribute("class", "item");
-    imgEl.setAttribute("width", "100px");
+    imgEl.setAttribute("width", "200px");
     imgEl.setAttribute("id", imgs[i].imgName);
 
     img.appendChild(imgEl);
@@ -40,7 +40,7 @@ imgEl.forEach(imgEl => {
 
 function goToCstmPage(event) {
   console.log("clicked");
-  let codedData = JSON.stringify(event.target.src.slice(28, 39));
+  let codedData = JSON.stringify(event.target.src.slice(22, 39));
   localStorage.setItem("data", codedData);
   location.href = "shirt.html";
   imgEl.removeEventListener("click", goToCstmPage);
