@@ -40,7 +40,7 @@ imgEl.forEach(imgEl => {
 
 function goToCstmPage(event) {
   console.log("clicked");
-  let codedData = JSON.stringify(event.target.src.slice);
+  let codedData = JSON.stringify(event.target.src.slice(30, 41));
   localStorage.setItem("data", codedData);
   location.href = "shirt.html";
   imgEl.removeEventListener("click", goToCstmPage);
