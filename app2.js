@@ -1,8 +1,8 @@
 let iconPlace = document.getElementById("closet");
 
-iconPlace.addEventListener("click", placeIcon);
+// iconPlace.addEventListener("click", placeIcon);
 
-function placeIcon() {
+// function placeIcon() {
   let retryData = localStorage.getItem("data");
   let decodedData = JSON.parse(retryData);
   console.log(decodedData);
@@ -14,6 +14,9 @@ function placeIcon() {
 
     iconPlace.appendChild(newIcon);
   }
-  iconPlace.removeEventListener("click", placeIcon);
-}
+
+
+  // }
+//   iconPlace.removeEventListener("click", placeIcon);
+// }
 // iconPlace.onload = placeIcon;

@@ -1,6 +1,6 @@
 let img = document.getElementById("ob");
 
-let imgFile = ["ballon.png", "bekind.png", "pizza.png"];
+let imgFile = ["ballon.png", "bekind.png", "pizza.png", "jake.png", "skull.png"];
 let imgs = [];
 
 function Img(name) {
@@ -30,12 +30,20 @@ function render() {
 
 render();
 
-let imgEl = document.querySelector(".item");
+let imgEl = document.querySelectorAll(".item");
 
-function goToCstmPage() {
+
+imgEl.forEach(imgEl => {
+  imgEl.addEventListener('click', goToCstmPage);
+});
+
+
+function goToCstmPage(event) {
   console.log("clicked");
-  let codedData = JSON.stringify(imgs[0].filePath);
+  let codedData = JSON.stringify(event.target.src.slice(28, 39));
   localStorage.setItem("data", codedData);
+  location.href = "shirt.html";
+  imgEl.removeEventListener("click", goToCstmPage);
 }
 
-imgEl.onclick = goToCstmPage;
+// imgEl.addEventListener('click', goToCstmPage);
