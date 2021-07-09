@@ -1,0 +1,24 @@
+#closet {
+  /* border: solid tomato;  */
+  height: 1000px;
+  position: relative;
+}
+
+#shirrt {
+  /* border: solid tomato; */
+  width: 400px;
+  height: 450px;
+  margin-top: 7rem;
+  margin-left: 25rem;
+  position: absolute;
+}
+
+.icon {
+  position: absolute;
+  /* border: solid tomato;  */
+  /* display: inline-block; */
+  width: 100px;
+  height: 100px;
+  top: 11rem;
+  left: 34rem;
+}
